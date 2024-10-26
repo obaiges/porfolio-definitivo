@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modo Claro */
+:root {
+    --bg-color: #F5F5F5;
+    --section-bg-color: #DCE4EF;
+    --button-color: #5A7D9A;
+    --text-color: #2E2E2E;
+    --text-secondary-color: #6C7A89;
+    --accent-color: #A2B9D6;
+    --thema: #ffffff;
+}
+
+/* Modo Oscuro */
+.dark-theme {
+    --bg-color: #0D1B2A;
+    --section-bg-color: #1B263B;
+    --button-color: #415A77;
+    --text-color: #E0E1DD;
+    --text-secondary-color: #778DA9;
+    --accent-color: #A7C4D6;
+    --thema: #000000;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: sans-serif;
+    transition: all 0.5s;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+span {
+    color: var(--text-color);
+
+}
+
+button {
+    padding: 0.5rem 1.25rem;
+    border-radius: 5px;
+    background-color: var(--button-color);
+    color: #E0E1DD;
+
+    &:hover {
+        opacity: 75%;
+    }
+}
