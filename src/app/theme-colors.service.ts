@@ -14,4 +14,8 @@ export class ThemeService {
       document.body.classList.remove('dark-theme');
     }
   }
+
+  getTheme(): boolean {
+    return document.body.classList.contains("dark-theme") ? false : true
+  }
 }

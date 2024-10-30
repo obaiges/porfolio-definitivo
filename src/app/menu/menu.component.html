@@ -1,2 +1,14 @@
-<span>MENU WORKS</span>
-<img src="../../assets/logo.jpg" width="50px" alt="">
+<section class="w-full p-1 flex items-center gap-8 justify-between bg-[var(--text-secondary-color)]">
+    <div class="ml-40 flex gap-4 items-center cursor-pointer">
+        <img src="../../assets/logo.jpg" class="rounded-2xl" width="50px" alt="">
+        <span class="titulo font-extrabold">ÓSCAR BAIGES</span>
+    </div>
+    <span class="text-[var(--thema)]">V. 1</span>
+    <div class="mr-40">
+        @if(getLight()){
+            <i (click)="cambioTema()" class="text-[var(--thema)] hover:scale-125 duration-200 transition text-xl fas fa-sun"></i>
+        } @else {
+            <i (click)="cambioTema()" class="text-[var(--thema)] hover:scale-125 duration-200 transition text-xl fas fa-moon"></i>
+        }
+    </div>
+</section>

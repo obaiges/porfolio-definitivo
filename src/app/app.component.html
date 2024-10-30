@@ -1,16 +1,22 @@
-@defer() {
-    <app-menu></app-menu>
-}
 <section>
-    <button (click)="cambioTema()">Cambiar Tema</button>
-</section>
-
-
-<div class="w-80 border-2 p-4 rounded-md mt-4">
-    @for (c of colores; track $index) {
-    <div class="flex justify-between gap-4 items-center mt-4 {{ $index !== 0 ? 'mt-4' : 'mt-0' }}">
-        <span>{{c.name}}</span>
-        <span class="w-36 rounded-md h-10 border-2" [ngStyle]="{ 'background-color': 'var(' + c.color + ')' }"></span>
-    </div>
+    @defer() {
+    <app-menu class="w-100vw"></app-menu>
     }
-</div>
+</section>
+<main class="flex box-border !overflow-x-hidden">
+    <section class="{{abierto ? 'w-[75vw]' : 'w-[100vw]'}} trasition duration-1000 transition-all">
+        
+    </section>
+    <section
+        class="h-[calc(100vh-61px)] box-border bg-[var(--section-bg-color)] trasition duration-1000 transition-all {{abierto ?  'w-[25vw]' : 'w-0'}}">
+        @defer() {
+            <app-recursos class="{{abierto ? 'opacity-100' : 'opacity-0'}} trasition duration-1000 transition-all"></app-recursos>
+        }
+        <button
+            class="rounded-full w-11 h-11 p-0 box-border absolute top-24 trasition duration-1000 transition-all {{!abierto ? 'left-[calc(99vw-60px)]' : 'left-[calc(75vw-22px)]'}}"
+            (click)="abierto = !abierto">
+            <i
+                class="fas fa-arrow-right {{!abierto ? 'rotate-180' : ''}} trasition duration-1000 transition-transform"></i>
+        </button>
+    </section>
+</main>

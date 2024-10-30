@@ -1,0 +1,13 @@
+<div class="border-2 m-8 flex justify-center text-center bg-[#a1adbd] px-12 items-center py-4 rounded-md mt-4">
+    <div class="text-center">
+        <span class="font-extrabold">Paleta de colores</span>
+        <div class="grid grid-cols-1 2xl:grid-cols-3 gap-4">
+            @for (c of colores; track $index) {
+            <div class="flex items-center mt-4">
+                <span class="rounded-md shadow-xl h-10 transition-all cursor-pointer duration-300 p-2 hover:scale-110 {{$index == 3 ? 'text-[var(--thema)]' : ''}}"
+                    [ngStyle]="{ 'background-color': 'var(' + c.color + ')' }">{{c.name}}</span>
+            </div>
+            }
+        </div>
+    </div>
+</div>
