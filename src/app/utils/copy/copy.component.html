@@ -1,0 +1,11 @@
+<div class="copy-container" (click)="copyToClipboard()">
+    @if(isHovered) {
+    <span class="copy-icon text-[var(--theme)]">
+        <i class="far fa-copy"></i>
+    </span>
+    } @else {
+    <span class="content">
+        <ng-content></ng-content>
+    </span>
+    }
+</div>

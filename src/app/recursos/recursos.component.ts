@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { CopyComponent } from "../utils/copy/copy.component";
 
 @Component({
   selector: 'app-recursos',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CopyComponent],
   templateUrl: './recursos.component.html',
   styleUrl: './recursos.component.scss'
 })
@@ -34,7 +35,11 @@ export class RecursosComponent {
     {
       name: '#A2B9D6',
       color: '--accent-color'
-    },
+    }
   ]
+
+  constructor() {
+    
+  }
 
 }

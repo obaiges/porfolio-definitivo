@@ -3,12 +3,12 @@
         <img src="../../assets/logo.jpg" class="rounded-2xl" width="50px" alt="">
         <span class="titulo font-extrabold">ÓSCAR BAIGES</span>
     </div>
-    <span class="text-[var(--thema)]">V. 1</span>
+    <span class="text-[var(--theme)]">V. 1</span>
     <div class="mr-40">
         @if(getLight()){
-            <i (click)="cambioTema()" class="text-[var(--thema)] hover:scale-125 duration-200 transition text-xl fas fa-sun"></i>
+            <i (click)="cambioTema()" class="text-[var(--theme)] hover:scale-125 duration-200 transition text-xl fas fa-sun"></i>
         } @else {
-            <i (click)="cambioTema()" class="text-[var(--thema)] hover:scale-125 duration-200 transition text-xl fas fa-moon"></i>
+            <i (click)="cambioTema()" class="text-[var(--theme)] hover:scale-125 duration-200 transition text-xl fas fa-moon"></i>
         }
     </div>
 </section>
